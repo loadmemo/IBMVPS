@@ -37,5 +37,7 @@ jobs:
     - name: Restart IBM Zikloa Cloud
       env:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
+        IBM_BARK_NAME: ${{ secrets.IBM_BARK_NAME }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
+        ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_BARK_NAME"
