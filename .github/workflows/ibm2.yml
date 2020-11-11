@@ -31,8 +31,7 @@ jobs:
       env:
         RESOURSE_ID: ${{ secrets.RESOURSE_IDs }}
       run: |
-        ./IBM_Cloud_CLI/ibmcloud target -o mengliu@me.com -s dev
-        ./IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
+        ./IBM_Cloud_CLI/ibmcloud target -o mengliu@me.com -s dev -g "$RESOURSE_ID"
         ./IBM_Cloud_CLI/ibmcloud target --cf
         ./IBM_Cloud_CLI/ibmcloud cf install -f -v 6.15.0
     - name: Restart IBM Zikloa Cloud
